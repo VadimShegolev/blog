@@ -1,7 +1,9 @@
-<div class="block">
+<div class="welcome-page">
 
 <% if user_signed_in? %>
-    <span>Hello, <%= current_user.first_name %></span>
+    <span>Hello, <%= current_user.first_name %>!</span></ br>
+    <h5><span>Do you want to make your new post?</span></h5>
+    <%= link_to 'New post', new_post_path%>
     <%= button_to 'Sign out', destroy_user_session_path, :method => :delete %>
 <% else %>
     <%= button_to 'Log in', new_user_session_path %> or <%= link_to 'Sign up', new_user_registration_path %>

@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
+.welcome-page{
+    display: flex;
+    width: 500px;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    min-height: 3em;
+    resize: both;
+    background: #ffd73e33;
+    font-size: 26px;
+}
+
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: fixed;
@@ -41,27 +55,6 @@ body{
 
 .white-font{
     color: aliceblue;
-}
-
-#button{
-    display:block;
-    border-radius: 15px;
-    cursor: pointer;
-    width: 200px;
-    height: 40px;
-    margin: auto;
-    font-size: large;
-    background-color: rgb(118, 161, 0);
-    border: 0ch;
-    animation: anima 1s;    
-}
-button:active{
-    animation: anima 1s;
-}
-
-#button:hover {
-    transform: scale(1.1);
-    transition: .8s;
 }
 
 #text-box{
