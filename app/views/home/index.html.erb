@@ -1,12 +1,15 @@
-<div class="welcome-page">
-
 <% if user_signed_in? %>
+<div class="welcome-page">
     <span>Hello, <%= current_user.first_name %>!</span></ br>
     <h5><span>Do you want to make your new post?</span></h5>
+    <%= link_to 'My posts', posts_path%>
     <%= link_to 'New post', new_post_path%>
     <%= button_to 'Sign out', destroy_user_session_path, :method => :delete %>
+</div>
 <% else %>
-    <%= button_to 'Log in', new_user_session_path %> or <%= link_to 'Sign up', new_user_registration_path %>
+    <h2>Welcome to Soft Blog. </ br>Please, log in or sign up:</h2></ br>
+<div class="welcome-page">
+    <%= link_to 'Log in', new_user_session_path %> or <%= link_to 'Sign up', new_user_registration_path %>
 <% end %>
 
 <p class="notice"><%= notice %></p>

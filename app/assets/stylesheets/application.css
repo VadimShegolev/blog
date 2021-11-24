@@ -23,6 +23,7 @@ body{
     backdrop-filter: blur(7px);
     background-size: cover;
     margin: 0px;
+    background-color: rgb(255, 247, 236);
 }
 
 .contact-info{
@@ -57,7 +58,7 @@ body{
     color: aliceblue;
 }
 
-#text-box{
+.text-box{
     color: aliceblue;
     flex-direction: column;
     align-items: center;
