@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :feeds
   resources :comments
   resources :posts
   # get 'registrations/:devise'

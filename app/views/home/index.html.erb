@@ -4,6 +4,9 @@
     <h5><span>Do you want to make your new post?</span></h5>
     <%= link_to 'My posts', posts_path%>
     <%= link_to 'New post', new_post_path%>
+    <%= link_to 'Favorite feed' %>
+    <%= link_to 'My hashtags' %>
+    <br>
     <%= button_to 'Sign out', destroy_user_session_path, :method => :delete %>
 </div>
 <% else %>
