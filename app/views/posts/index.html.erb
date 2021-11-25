@@ -20,8 +20,8 @@
         <td style="width:50px; height:auto">
           <%= link_to image_tag(post.image, style:'width:100%'), posts_path %>
         </td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><button><%= link_to 'Show', post %></button></td>
+        <td><button><%= link_to 'Edit', edit_post_path(post) %></button></td>
         <td><%= button_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

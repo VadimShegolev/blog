@@ -1,4 +1,6 @@
 <% if user_signed_in? %>
+    <%= button_to 'Sign out', destroy_user_session_path, :method => :delete %>
+    <button><%= link_to 'Edit profile',  edit_user_registration_path %></button>
 <div class="welcome-page">
     <span>Hello, <%= current_user.first_name %>!</span></ br>
     <h5><span>Do you want to make your new post?</span></h5>
@@ -7,8 +9,6 @@
     <%= link_to 'Favorite feed' %>
     <%= link_to 'My hashtags' %>
     <br>
-    <%= button_to 'Sign out', destroy_user_session_path, :method => :delete %>
-    <%= link_to 'Edit profile',  edit_user_registration_path %>
 </div>
 <% else %>
     <h2>Welcome to Soft Blog. </ br>Please, log in or sign up:</h2></ br>
