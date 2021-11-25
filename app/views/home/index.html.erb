@@ -8,6 +8,7 @@
     <%= link_to 'My hashtags' %>
     <br>
     <%= button_to 'Sign out', destroy_user_session_path, :method => :delete %>
+    <%= link_to 'Edit profile',  edit_user_registration_path %>
 </div>
 <% else %>
     <h2>Welcome to Soft Blog. </ br>Please, log in or sign up:</h2></ br>
