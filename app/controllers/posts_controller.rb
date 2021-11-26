@@ -6,6 +6,12 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  #GET /posts/hashtag
+  def hashtags
+    tag = Tag.find_by(name: params[:name])
+    @posts = tag.posts
+  end
+
   # GET /posts/1 or /posts/1.json
   def show
   end
@@ -55,6 +61,12 @@ class PostsController < ApplicationController
       format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+
+  #TODO: Feed of all users' posts
+  def feed
+    @posts = Post.all
   end
 
   private

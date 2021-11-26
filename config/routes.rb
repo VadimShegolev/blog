@@ -12,5 +12,6 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 
+  get '/posts/hashtag/:name', to:'posts#hashtags'
   
 end
