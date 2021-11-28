@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1>Hashtag<%=  %></h1>
 <div class="block">
 <table>
   <thead>
     <tr>
+      <th>Likes</th>
       <th>Title</th>
       <th>Body</th>
       <th>Image</th>
@@ -16,6 +17,11 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
+        <td>
+          <%= button_to like_post_path(post), method: :put do %>
+              <span><%= post.get_upvotes.size %></span>
+          <% end %>
+        </td>
         <td><%= post.title %></td>
         <td><%= render_with_hashtags(post.body) %></td>
         <td style="width:50px; height:auto">

@@ -4,6 +4,8 @@ class Post < ApplicationRecord
     belongs_to :user, foreign_key: 'user_id'
     has_and_belongs_to_many :tags
 
+    acts_as_votable
+
     after_create do
         post = Post.find_by(id: self.id)
         hashtags = self.body.scan(/#\w+/)

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[ show edit update destroy ]
+  before_action :set_post, only: %i[ show edit update destroy, :upvote, :downvote ]
 
   # GET /posts or /posts.json
   def index
@@ -10,6 +10,19 @@ class PostsController < ApplicationController
   def hashtags
     tag = Tag.find_by(name: params[:name])
     @posts = tag.posts
+  end
+
+  #upvote_from user
+  def upvote
+    @post = Post.find(params[:id])
+    @post.upvote_from current_user
+    redirect_to posts_path
+  end
+  #downvote_from user
+  def downvote
+    @post = Post.find(params[:id])
+    @post.downvote_from current_user
+    redirect_to posts_path
   end
 
   # GET /posts/1 or /posts/1.json
